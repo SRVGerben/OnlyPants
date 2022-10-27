@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlyPants</title>
+    <link rel="icon" href="..\IMG\logo.png" type="image/icon type">
+    <link href="..\CSS\Index.css" rel="stylesheet">
+    <link href="..\CSS\Carousel.css" rel="stylesheet">
+
+</head>
+
+<body style="background-color: #333">
+    <header>
+      <div>
+        <nav>
+          <a><img src="..\IMG\logo.png">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <span class="line"> </span>
+          <ul>
+            <li class="active">
+                <a href="#" class="active">Home</a>
+            </li>
+            <li>
+                <a href="#">Winkel</a>
+            </li>
+            <li>
+                <a href="#">Route</a>
+            </li>
+            <li>
+                <a  href="#">Over ons</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <br>
+    </header>
+
+    <div class="mySlides fade img1">
+      <div class="text">Caption Text</div>
+    </div>
+  
+    <div class="mySlides fade img2">
+      <div class="text">Caption Two</div>
+    </div>
+  
+    <div class="mySlides fade img3">
+      <div class="text">Caption Three</div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)" style="color: white;">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)" style="color: white;">&#10095;</a>
+  </div>
+  
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slides[slideIndex-1].style.display = "block";
+    }
+    </script>
+
+  </body>
+</body>
+</html>
